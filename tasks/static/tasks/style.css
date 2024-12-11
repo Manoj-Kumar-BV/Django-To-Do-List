@@ -40,3 +40,66 @@ button {
 button:hover {
     background-color: #5a9bd3;
 }
+
+.completed-checkmark {
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;          /* Add this line */
+    justify-content: center; /* Add this line */
+    align-items: center;     /* Add this line */
+    height: 100vh;           /* Add this line */
+    margin: 0;               /* Add this line */
+}
+
+.container {
+    width: 60%;             /* Adjust width as needed */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Existing styles */
+h1 {
+    color: #4682b4;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #e6f7ff;
+}
+
+a {
+    color: #4682b4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a9bd3;
+}

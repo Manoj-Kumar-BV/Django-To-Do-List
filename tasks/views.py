@@ -1,6 +1,15 @@
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
+from django.shortcuts import render, redirect
+from .models import Task
+from .forms import TaskForm
+
+def mark_completed(request, task_id):
+    task = Task.objects.get(id=task_id)
+    task.completed = True
+    task.save()
+    return redirect('index')
 
 def index(request):
     tasks = Task.objects.all()
@@ -33,3 +42,9 @@ def delete_task(request, task_id):
         task.delete()
         return redirect('index')
     return render(request, 'tasks/delete_task.html', {'task': task})
+
+def mark_completed(request, task_id):
+    task = Task.objects.get(id=task_id)
+    task.completed = True
+    task.save()
+    return redirect('index')

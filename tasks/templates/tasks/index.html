@@ -2,21 +2,31 @@
 <html>
 <head>
     <title>To-Do List</title>
+    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'tasks/style.css' %}">
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <ul>
-        {% for task in tasks %}
-        <li>
-            <a href="{% url 'update_task' task.id %}">{{ task.title }}</a>
-            <form action="{% url 'delete_task' task.id %}" method="post" style="display:inline;">
-                {% csrf_token %}
-                <button type="submit">Delete</button>
-            </form>
-        </li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'add_task' %}">Add Task</a>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <ul>
+            {% for task in tasks %}
+            <li>
+                <a href="{% url 'update_task' task.id %}">{{ task.title }}</a>
+                {% if task.completed %}
+                <span class="completed-checkmark">✔</span>
+                {% endif %}
+                <form action="{% url 'delete_task' task.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+                <form action="{% url 'mark_completed' task.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Complete</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'add_task' %}">Add Task</a>
+    </div>
 </body>
 </html>
