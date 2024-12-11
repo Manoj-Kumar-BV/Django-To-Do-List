@@ -61,9 +61,4 @@ This is a simple To-Do List application built with Django. It allows users to ad
 - Click on a task title to update it.
 - Use the "Delete" button to remove a task.
 - Use the "Complete" button to mark a task as complete.
-
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and create a pull request with your changes.
-
 ```
