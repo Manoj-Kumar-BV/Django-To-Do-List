@@ -49,26 +49,27 @@ button:hover {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    display: flex;          /* Add this line */
-    justify-content: center; /* Add this line */
-    align-items: center;     /* Add this line */
-    height: 100vh;           /* Add this line */
-    margin: 0;               /* Add this line */
+    background-color: #181818;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    width: 60%;             /* Adjust width as needed */
-    background-color: white;
+    width: 60%;
+    background-color: #282828;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     border-radius: 8px;
+    border: 2px solid #00ffff;
 }
 
-/* Existing styles */
 h1 {
-    color: #4682b4;
+    color: #00ffff;
+    text-align: center;
 }
 
 ul {
@@ -77,14 +78,18 @@ ul {
 }
 
 li {
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #e6f7ff;
+    border: 1px solid #00cccc;
+    background-color: #333333;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 a {
-    color: #4682b4;
+    color: #00cccc;
     text-decoration: none;
 }
 
@@ -93,13 +98,24 @@ a:hover {
 }
 
 button {
-    background-color: #4682b4;
-    color: white;
+    background-color: #00cccc;
+    color: #000000;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #5a9bd3;
+    background-color: #009999;
+}
+
+.completed-checkmark {
+    color: #00ff00;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Add neon glowing effect */
+.container, li, button {
+    box-shadow: 0 0 5px #00cccc, 0 0 10px #00cccc, 0 0 15px #00cccc, 0 0 20px #00cccc, 0 0 25px #00cccc, 0 0 30px #00cccc;
 }

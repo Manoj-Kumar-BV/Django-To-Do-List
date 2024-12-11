@@ -4,6 +4,17 @@ from .forms import TaskForm
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+import pdfkit
+
+def download_pdf(request):
+    tasks = Task.objects.filter(completed=True)
+    html = render_to_string('tasks/completed_tasks.html', {'tasks': tasks})
+    pdf = pdfkit.from_string(html, False)
+    response = HttpResponse(pdf, content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="completed_tasks.pdf"'
+    return response
 
 def mark_completed(request, task_id):
     task = Task.objects.get(id=task_id)

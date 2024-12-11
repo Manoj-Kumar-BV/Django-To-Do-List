@@ -27,6 +27,7 @@
             {% endfor %}
         </ul>
         <a href="{% url 'add_task' %}">Add Task</a>
+        <button onclick="window.location.href='{% url 'download_pdf' %}'">Download Completed Tasks PDF</button> <!-- Add this line -->
     </div>
 </body>
 </html>
