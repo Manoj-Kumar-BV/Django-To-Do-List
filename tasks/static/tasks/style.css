@@ -49,26 +49,12 @@ button:hover {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    display: flex;          /* Add this line */
-    justify-content: center; /* Add this line */
-    align-items: center;     /* Add this line */
-    height: 100vh;           /* Add this line */
-    margin: 0;               /* Add this line */
+    background-color: white;  /* Changed to white */
+    color: black;  /* Changed to black */
 }
 
-.container {
-    width: 60%;             /* Adjust width as needed */
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Existing styles */
 h1 {
-    color: #4682b4;
+    color: blue;  /* Changed to blue */
 }
 
 ul {
@@ -80,11 +66,11 @@ li {
     margin: 5px 0;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #e6f7ff;
+    background-color: #f0f8ff;  /* Light blue */
 }
 
 a {
-    color: #4682b4;
+    color: blue;  /* Changed to blue */
     text-decoration: none;
 }
 
@@ -93,7 +79,7 @@ a:hover {
 }
 
 button {
-    background-color: #4682b4;
+    background-color: blue;  /* Changed to blue */
     color: white;
     border: none;
     padding: 5px 10px;
@@ -101,5 +87,68 @@ button {
 }
 
 button:hover {
-    background-color: #5a9bd3;
+    background-color: #5a9bd3;  /* Light blue for hover */
+}
+
+.completed-checkmark {
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;  /* Changed to white */
+    color: black;  /* Changed to black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 60%;
+    background-color: white;  /* Changed to white */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Existing styles */
+h1 {
+    color: blue;  /* Changed to blue */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f8ff;  /* Light blue */
+}
+
+a {
+    color: blue;  /* Changed to blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: blue;  /* Changed to blue */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a9bd3;  /* Light blue for hover */
 }
