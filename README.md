@@ -1,4 +1,4 @@
-Let's create a new `README.md` file for your Django To-Do List project.
+
 
 ### README.md
 
